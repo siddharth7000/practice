@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class cc{
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int x = s.nextInt();
+        int a[] = new int[x];
+        
+        for(int i=0;i<x;i++){
+             a[i] = s.nextInt();
+        }
+
+        for(int i=0;i<x/2;i++){
+            int temp = a[i];
+            a[i] = a[(x-1)-i];
+            a[(x-1)-i] = temp;
+        }
+
+        for(int i=0;i<x;i++){
+            System.out.print(a[i]+" ");
+       }
+    }
+}
